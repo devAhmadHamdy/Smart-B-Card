@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_discover">
+
+    <fragment
+        android:id="@+id/navigation_discover"
+        android:name="com.uchihan.smartb_card.presentation.ui.home.HomeFragment"
+        android:label="@string/nearby"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_saved_cards"
+        android:name="com.uchihan.smartb_card.presentation.ui.all_cards.AllCardsFragment"
+        android:label="@string/saved_cards"
+        tools:layout="@layout/fragment_all_cards" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.uchihan.smartb_card.presentation.ui.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

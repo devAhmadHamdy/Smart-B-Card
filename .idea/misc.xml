@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/card_bg.xml" value="0.10625" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/actions_bg.xml" value="0.10625" />
+        <entry key="app/src/main/res/drawable/button_background_blue.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/ic_login_hero.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/ic_login_hero_large.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/ic_register_hero.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/ic_side_bg.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout-w1240dp/activity_registration.xml" value="0.11512717536813923" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.16134751773049646" />
+        <entry key="app/src/main/res/layout/activity_registration.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1671875" />
+        <entry key="app/src/main/res/layout/all_cards_custom_row.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/card_custom_row.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_all_cards.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.33177083333333335" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

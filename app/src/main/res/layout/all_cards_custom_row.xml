@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dimen16"
+    android:layout_marginBottom="@dimen/dimen10"
+    android:background="@drawable/card_bg"
+    android:elevation="@dimen/dimen2"
+    android:paddingBottom="@dimen/dimen10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/dimen16"
+            android:src="@drawable/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen16"
+            android:layout_marginTop="@dimen/dimen7"
+            android:text="Ahmed Hamdy"
+            app:layout_constraintStart_toEndOf="@id/img_user"
+            app:layout_constraintTop_toTopOf="@id/img_user" />
+
+        <TextView
+            android:id="@+id/tv_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen16"
+            android:layout_marginTop="@dimen/dimen2"
+            android:text="Software Developer"
+            app:layout_constraintStart_toEndOf="@id/img_user"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+
+        <TextView
+            android:id="@+id/tv_mobile_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen16"
+            android:textSize="@dimen/txt16"
+            android:fontFamily="@font/nearbytitle"
+            android:text="@string/phone_number"
+            app:layout_constraintStart_toStartOf="@id/img_user"
+            app:layout_constraintTop_toBottomOf="@id/img_user" />
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/dimen2"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen5"
+            android:fontFamily="@font/nearby"
+            android:textSize="@dimen/txt16"
+
+            android:text="01201511592"
+            android:textColor="@android:color/holo_blue_dark"
+            app:layout_constraintStart_toEndOf="@id/tv_mobile_label"
+            app:layout_constraintTop_toTopOf="@id/tv_mobile_label" />
+
+        <TextView
+            android:id="@+id/tv_email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen3"
+            android:fontFamily="@font/nearbytitle"
+            android:textSize="@dimen/txt16"
+
+            android:text="@string/email"
+            app:layout_constraintStart_toEndOf="@id/img_user"
+            app:layout_constraintStart_toStartOf="@id/tv_mobile_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_mobile" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/dimen2"
+            android:textSize="@dimen/txt16"
+
+            android:layout_marginStart="@dimen/dimen5"
+            android:fontFamily="@font/nearby"
+            android:text="dev.ahmed@mail.com"
+            android:textColor="@android:color/holo_blue_dark"
+            app:layout_constraintStart_toEndOf="@id/tv_email_label"
+            app:layout_constraintTop_toTopOf="@id/tv_email_label" />
+
+        <TextView
+            android:id="@+id/tv_address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen3"
+            android:fontFamily="@font/nearbytitle"
+            android:text="@string/address"
+            android:textSize="@dimen/txt16"
+
+            app:layout_constraintStart_toEndOf="@id/img_user"
+            app:layout_constraintStart_toStartOf="@id/tv_email_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/dimen5"
+            android:fontFamily="@font/nearby"
+            android:text="Cairo-Egypt"
+            android:layout_marginTop="@dimen/dimen2"
+            android:textSize="@dimen/txt16"
+
+            android:textColor="@android:color/holo_blue_dark"
+            app:layout_constraintStart_toEndOf="@id/tv_address_label"
+            app:layout_constraintTop_toTopOf="@id/tv_address_label" />
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/lay_action"
+            android:layout_marginHorizontal="@dimen/dimen16"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:background="@drawable/button_background_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_name">
+
+            <ImageView
+                android:id="@+id/btn_delete"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="@dimen/dimen10"
+                android:src="@android:drawable/ic_delete"
+
+                app:tint="@color/white"
+                />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
