@@ -48,9 +48,4 @@ class RegistrationViewModel @Inject constructor(
             UserModel::class.java
         )
     }
-
-    fun checkLoginState(): Boolean {
-        return sharedPreferences.getString(Constants.REGISTERED_USER, null) != null
-    }
-
 }

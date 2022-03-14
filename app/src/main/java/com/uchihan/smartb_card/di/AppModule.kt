@@ -4,22 +4,18 @@ import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import androidx.room.Room
-import androidx.room.migration.Migration
 import com.google.gson.Gson
 import com.uchihan.smartb_card.common.Constants
 import com.uchihan.smartb_card.data.repository.NearbyRepoImpl
 import com.uchihan.smartb_card.data.room.NearbyDao
 import com.uchihan.smartb_card.data.room.NearbyDatabase
 import com.uchihan.smartb_card.domain.repository.NearbyRepo
-import com.uchihan.smartb_card.domain.use_case.NearbyUseCase
-import com.uchihan.smartb_card.presentation.ui.registration.RegistrationActivity
+import com.uchihan.smartb_card.domain.use_case.GetAllCardsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
 
 
 @Module
@@ -48,8 +44,8 @@ class AppModule {
     }
 
     @Provides
-    fun provideNearbyUseCase(nearbyRepo: NearbyRepoImpl):NearbyUseCase{
-        return NearbyUseCase(nearbyRepo)
+    fun provideNearbyUseCase(nearbyRepo: NearbyRepoImpl):GetAllCardsUseCase{
+        return GetAllCardsUseCase(nearbyRepo)
     }
 
     @Provides

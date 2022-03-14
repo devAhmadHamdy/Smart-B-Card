@@ -35,7 +35,8 @@ import com.uchihan.smartb_card.common.Constants
 import com.uchihan.smartb_card.common.Utils
 import com.uchihan.smartb_card.data.models.RoomUserModel
 import com.uchihan.smartb_card.data.models.UserModel
-import com.uchihan.smartb_card.domain.use_case.NearbyUseCase
+import com.uchihan.smartb_card.domain.use_case.AddCardUseCase
+import com.uchihan.smartb_card.domain.use_case.GetAllCardsUseCase
 import com.uchihan.smartb_card.presentation.adapters.CardAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -75,7 +76,10 @@ class HomeFragment : Fragment(), GoogleApiClient.ConnectionCallbacks,
     private var mPubMessage: Message? = null
 
     @Inject
-    lateinit var nearbyUseCase: NearbyUseCase
+    lateinit var getAllCardsUseCase: GetAllCardsUseCase
+
+    @Inject
+    lateinit var addCardUseCase: AddCardUseCase
 
     /**
      * A [MessageListener] for processing messages from nearby devices.
@@ -88,7 +92,7 @@ class HomeFragment : Fragment(), GoogleApiClient.ConnectionCallbacks,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        var homeViewModelFactory = HomeViewModelFactory(nearbyUseCase)
+        var homeViewModelFactory = HomeViewModelFactory(getAllCardsUseCase,addCardUseCase)
 
         homeViewModel =
             ViewModelProvider(this, homeViewModelFactory)[HomeViewModel::class.java]

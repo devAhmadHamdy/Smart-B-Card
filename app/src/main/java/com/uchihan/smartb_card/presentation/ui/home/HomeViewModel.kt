@@ -1,21 +1,18 @@
 package com.uchihan.smartb_card.presentation.ui.home
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import android.text.TextUtils
 
 import android.content.SharedPreferences
 import android.os.Build
 import com.uchihan.smartb_card.data.models.RoomUserModel
-import com.uchihan.smartb_card.domain.use_case.NearbyUseCase
+import com.uchihan.smartb_card.domain.use_case.AddCardUseCase
+import com.uchihan.smartb_card.domain.use_case.GetAllCardsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import java.util.*
 import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val nearbyUseCase: NearbyUseCase
+    private val getAllCardsUseCase: GetAllCardsUseCase,private val addCardUseCase: AddCardUseCase
 ) : ViewModel() {
 
     private val KEY_UUID = Build.MODEL
@@ -26,9 +23,9 @@ class HomeViewModel @Inject constructor(
     }
 
     suspend fun saveNearby(roomUserModel: RoomUserModel){
-        nearbyUseCase.addNearby(roomUserModel)
+        addCardUseCase.addNearby(roomUserModel)
     }
     suspend fun getAllNearby(): List<RoomUserModel> {
-        return nearbyUseCase.getAllUsers()
+        return getAllCardsUseCase.getAllUsers()
     }
 }

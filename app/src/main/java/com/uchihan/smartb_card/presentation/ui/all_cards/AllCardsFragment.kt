@@ -9,7 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.uchihan.smartb_card.data.models.RoomUserModel
 import com.uchihan.smartb_card.databinding.FragmentAllCardsBinding
-import com.uchihan.smartb_card.domain.use_case.NearbyUseCase
+import com.uchihan.smartb_card.domain.use_case.DeleteCardUseCase
+import com.uchihan.smartb_card.domain.use_case.GetAllCardsUseCase
 import com.uchihan.smartb_card.presentation.adapters.AllCardsAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -31,19 +32,21 @@ class AllCardsFragment : Fragment(), AllCardsAdapter.AllCardsCallbacks {
     private val binding get() = _binding!!
 
     @Inject
-    lateinit var nearbyUseCase: NearbyUseCase
+    lateinit var getAllCardsUseCase: GetAllCardsUseCase
+
+    @Inject
+    lateinit var deleteCardUseCase: DeleteCardUseCase
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var allCardsFactory = AllCardsViewModelFactory(nearbyUseCase)
+        var allCardsFactory = AllCardsViewModelFactory(getAllCardsUseCase, deleteCardUseCase)
 
         allCardsViewModel =
             ViewModelProvider(this, allCardsFactory)[AllCardsViewModel::class.java]
 
         _binding = FragmentAllCardsBinding.inflate(inflater, container, false)
-
 
         return binding.root
     }
